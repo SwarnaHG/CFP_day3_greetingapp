@@ -49,6 +49,11 @@ public class GreetingController {
     public ResponseEntity<Greeting> savemsg(){
         return new ResponseEntity<>(greetingService.saveMessage(new Greeting()), HttpStatus.OK);
     }
+    //uc5
+    @GetMapping("/getbyid/{id}")
+    public String byid(@PathVariable Integer id){
+        return greetingService.getData(id);
+    }
 
 
 }
