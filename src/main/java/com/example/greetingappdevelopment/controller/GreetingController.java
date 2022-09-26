@@ -59,6 +59,11 @@ public class GreetingController {
     public List<Greeting> getAll(){
         return greetingService.getAllData();
     }
+    //uc7
+    @PutMapping("/edit/{id}")
+    public Greeting editbyid(@PathVariable Integer id,@RequestParam String content){
+        return greetingService.editdata(editbyid(id,content));
+    }
 
 
 }
