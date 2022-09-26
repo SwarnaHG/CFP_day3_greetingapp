@@ -39,6 +39,11 @@ public class GreetingController {
     public ResponseEntity<String> getMessage(){
         return new ResponseEntity<>(greetingService.getMessage(), HttpStatus.OK);
     }
+    //uc3
+    @PutMapping("/greetingmsg")
+    public ResponseEntity<String> getgreetMessage(){
+        return new ResponseEntity<>(greetingService.getMessage(), HttpStatus.OK);
+    }
 
 
 }
