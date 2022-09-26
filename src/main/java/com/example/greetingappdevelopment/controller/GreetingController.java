@@ -34,6 +34,11 @@ public class GreetingController {
     public Greeting sayhello(@PathVariable int counter,@RequestParam(value="content") String content){
         return new Greeting(counter,String.format(template,content));
     }
+    //uc2
+    @GetMapping("/getMessage")
+    public ResponseEntity<String> getMessage(){
+        return new ResponseEntity<>(greetingService.getMessage(), HttpStatus.OK);
+    }
 
 
 }
