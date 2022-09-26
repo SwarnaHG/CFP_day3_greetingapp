@@ -54,6 +54,11 @@ public class GreetingController {
     public String byid(@PathVariable Integer id){
         return greetingService.getData(id);
     }
+    //uc6
+    @GetMapping("/getlist")
+    public List<Greeting> getAll(){
+        return greetingService.getAllData();
+    }
 
 
 }
